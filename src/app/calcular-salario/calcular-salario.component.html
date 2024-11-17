@@ -1,0 +1,29 @@
+<div class="container mt-5">
+        <h1 class="text-center mb-0">Calcular de Salario Semanal</h1>
+      
+      <div class="form-group">
+        <form (ngSubmit)="calcularSalario()">
+          <div class="form-group mb-3">
+            <label for="horas" class="form-label">Horas trabajadas:</label>
+            <input
+              type="number"
+              id="horas"
+              [(ngModel)]="horasTrabajadas"
+              name="horas"
+              class="form-control"
+              placeholder="Ingrese las horas trabajadas"
+              required
+            />
+          </div>
+        <div class="text-center">
+          <button (click)="calcularSalario()" class="btn btn-outline-warning">Calcular Salario</button>
+        </div>
+        <p>
+        </form>
+        <div class="alert alert-warning" role="alert">
+            Salario Semanal: S/. {{ salario }}
+        </div>
+  </div>
+</div>
+  
+

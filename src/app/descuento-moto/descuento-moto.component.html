@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h2 class="text-center">Calculadora de Descuento para la Moto</h2>
+  
+    <!-- día de compra -->
+    <select [(ngModel)]="diaCompra" id="diaCompra" class="form-select" aria-label="Default select example">
+        <option selected>Selecciona el día de la compra:</option>
+        <option value="martes">Martes</option>
+        <option value="sabado">Sábado</option>
+        <option value="feriado">Feriado</option>
+      </select>
+    <p>
+    <!-- Botón -->
+    <div class="text-center">
+      <button (click)="calcularPrecio()" class="btn btn-outline-success">Calcular Precio</button>
+    </div>
+    <p>
+    <!--resultado -->
+    <div class="alert alert-primary" role="alert">
+        El precio de la moto es <strong>$ {{ valorMoto }}</strong>. <br />
+        Si compras el día <strong>{{ diaCompra }}</strong>, el descuento es del <strong>{{ descuento }}%</strong>, por lo que pagarás: 
+        <strong>$ {{ precioFinal }}</strong>.
+      </div>
+  </div>
+  
+  

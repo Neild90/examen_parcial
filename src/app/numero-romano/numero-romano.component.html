@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h2 class="text-center">Conversor de Números Romanos</h2>
+
+  <!-- Formulario para ingresar el número -->
+  <div class="form-group">
+    <label for="numero">Ingrese un número entre 1 y 10:</label>
+    <input 
+      [(ngModel)]="numero" 
+      id="numero" 
+      type="number" 
+      class="form-control" 
+      min="1" 
+      max="10" 
+      placeholder="Ingrese un número entre 1 y 10"
+    />
+  </div>
+  <p></p>
+  <!-- Botón  -->
+  <div class="text-center">
+    <button (click)="convertirARomano()" class="btn btn-outline-info">Convertir</button>
+  </div>
+  <p>
+  <!-- Resultado de la conversión -->
+  <div class="alert alert-info" role="alert">
+    El número <strong>{{ numero }}</strong> en romano es: <strong>{{ romano }}</strong>
+  </div>
+  
+</div>
+
+  
